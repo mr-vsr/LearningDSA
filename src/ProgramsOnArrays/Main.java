@@ -8,6 +8,7 @@ public class Main {
 
         int[] nums = {1,2,3,4,5,6,7};
         int k = 15;
-        ob.rotateLeft(nums,k);
+        ob.rotate(nums,k);
+        System.out.println(Arrays.toString(nums));
     }
 }

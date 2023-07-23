@@ -7,8 +7,6 @@ package ProgramsOnArrays;
 //rotate 2 steps to the right: [6,7,1,2,3,4,5]
 //rotate 3 steps to the right: [5,6,7,1,2,3,4]
 
-import java.util.Arrays;
-
 public class RotateArray {
 
 
@@ -40,17 +38,35 @@ public class RotateArray {
         reverseArray.reverse(nums,0, end);
     }
 
+    //LeftRotate
+
+    //Given an Array rotate the array to k steps [1,2,3,4,5,6,7]
+    //rotate 1 steps to the right: [2,3,4,5,6,7,1]
+    //rotate 2 steps to the right: [3,4,5,6,7,1,2]
+    //rotate 3 steps to the right: [4,5,6,7,1,2,3]
+    public void rotate(int[] nums, int k) {
+        int end = nums.length-1;
+        int LoopVar = k % nums.length;
+
+        for(int i = 0; i<LoopVar; i++){
+
+            int temp = nums[0];
+
+            for(int j=0; j<end ;j++){
+                nums[j] = nums[j+1];
+            }
+            nums[end] = temp;
+        }
+
+    }
     public void rotateLeft(int[] nums , int k){
 
         int loopVar = k % nums.length;
         int end = nums.length-1;
 
         reverseArray.reverse(nums,0,loopVar-1);
-        System.out.println(Arrays.toString(nums));
         reverseArray.reverse(nums,loopVar, end);
-        System.out.println(Arrays.toString(nums));
         reverseArray.reverse(nums,0, end);
-        System.out.println(Arrays.toString(nums));
     }
 
 }
