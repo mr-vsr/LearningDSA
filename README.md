@@ -36,4 +36,7 @@ Backtracking: Systematically searching through all possible solutions to find th
 
 
 
-Feel free to explore the respective directories for Java implementations of data structures and algorithms. Each implementation includes a detailed explanation and analysis of the approach and time complexity. If you have any improvements or additional algorithms to contribute, don't hesitate to submit a pull request following the coding standards and providing appropriate comments. Happy learning and coding!
+All the .java files are available in src folder.
+out/production contains all the .class files.
+Feel free to explore all the programs and any suggestions and feedback are appreciated.
+Enjoy your learning experience!
