@@ -17,16 +17,16 @@ public class SplitArrayLargestSum {
             end += nums[i];
         }
 
-        //Based on k divisions the answer must lie in the min and max range so we can apply binary search within this range
+        //Based on k divisions the answer must lie in the min and max range, so we can apply binary search within this range
 
         //Now as sub arrays are continuous we will start by taking sum of the elements one by one and if the sum exceeds the
-        //mid value we will create a new sub array then we will check if the number of pieces are greater than or less than k
+        //mid-value we will create a new sub array then we will check if the number of pieces are greater than or less than k
 
         //=> If the number of sub arrays are more than k then it means the answer is too small and hence more divisions.
-        //So to increase the answer we need to increase the mid value and therefore move start to mid+1.
+        //So to increase the answer we need to increase the mid-value and therefore move start to mid+1.
 
         //=> If the number of sub arrays are less than k then it means the possible answer is too big and hence less divisons.
-        //So to decrease the possible answer we need to decrease the mid value and therefore move end to mid.
+        //So to decrease the possible answer we need to decrease the mid-value and therefore move end to mid.
 
         //Finally when the start and end are equal then that will be our answer therefore return start or end outside the loop
         //as there will always be a possible answer.

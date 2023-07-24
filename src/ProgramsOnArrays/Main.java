@@ -4,11 +4,10 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        RotateArray ob = new RotateArray();
+        MeadianOfTwoSortedArrays ob = new MeadianOfTwoSortedArrays();
 
-        int[] nums = {1,2,3,4,5,6,7};
-        int k = 15;
-        ob.rotate(nums,k);
-        System.out.println(Arrays.toString(nums));
+        int[] nums1 = {}; int[] nums2 = {1};
+
+        System.out.println(ob.findMedianSortedArrays(nums1,nums2));
     }
 }
