@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Recursion.Main",
+            "projectName": "LearningDSA_4a268279"
+        },
+        {
+            "type": "java",
             "name": "NumbersRec",
             "request": "launch",
             "mainClass": "Recursion.NumbersRec",

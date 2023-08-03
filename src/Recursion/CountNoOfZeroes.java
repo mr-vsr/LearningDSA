@@ -1,6 +1,6 @@
 package Recursion;
 
-public class CountNoOfZeroes {
+public class  CountNoOfZeroes {
     public static int count(int n){
         if(n%10==n){
             if(n==0) {
