@@ -1,4 +1,4 @@
-package ProgramsOnArrays;
+package DataStructures.Arrays.ProgramsOnArrays;
 
 public class reverseArray {
 

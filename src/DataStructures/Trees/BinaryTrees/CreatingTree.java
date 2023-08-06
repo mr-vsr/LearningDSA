@@ -1,4 +1,4 @@
-package Trees;
+package DataStructures.Trees.BinaryTrees;
 
 import java.util.Scanner;
 
@@ -36,6 +36,7 @@ public class CreatingTree {
         // of the tree
         populate(sc, root);
     }
+
     // method to insert the elements to the root node
 
     private void populate(Scanner sc, Node node) {
@@ -68,6 +69,27 @@ public class CreatingTree {
         System.out.println(indent + node.value);
         display(node.left, indent + "\t");
         display(node.right, indent + "\t");
+    }
+
+    void prettyDisplay(){
+        prettyDisplay(root,0);
+    }
+    public void prettyDisplay(Node node , int level){
+        if(node == null){
+            return;
+        }
+        prettyDisplay(node.right,level+1);
+
+        if(level!=0){
+            for(int i=0;i<level-1;i++){
+                System.out.print("|\t\t");
+            }
+            System.out.println("|------------>" + node.value);
+        }
+        else{
+            System.out.println(node.value);
+        }
+        prettyDisplay(node.left,level+1 );
     }
 
 }

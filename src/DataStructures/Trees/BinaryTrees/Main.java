@@ -1,4 +1,4 @@
-package Trees;
+package DataStructures.Trees.BinaryTrees;
 
 import java.util.Scanner;
 
