@@ -3,11 +3,8 @@ package DynammicProgramming;
 public class FiboDP {
     public static int Fibo(int n , int[] dp){
 
-        if(n==1){
-            return 1;
-        }
-        if(n==0){
-            return 0;
+        if(n<=1){
+            return n;
         }
         if(dp[n]!=-1)
         {
