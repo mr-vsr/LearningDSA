@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "DynammicProgramming.Main",
+            "projectName": "LearningDSA_4a268279"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "Trees.Main",
             "projectName": "LearningDSA_4a268279"
         },
