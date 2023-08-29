@@ -55,15 +55,20 @@ class Main{
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of vertices");
         int vertices = sc.nextInt();
-        BidirectionalGraphUsingDfs graph = new BidirectionalGraphUsingDfs(vertices);
+
+        BidirectionalGraph graph = new BidirectionalGraph(vertices);
+        DFS dfs = new DFS();
+
         System.out.println("Enter the number of edges");
         int edges = sc.nextInt();
+
         for(int i=0;i<edges;i++){
+            System.out.println("Enter the source and destination");
             int src = sc.nextInt();
             int dest = sc.nextInt();
             graph.addEdge(src,dest);
         }
-        boolean isConnected = graph.isConnected();
+        boolean isConnected = dfs.isConnected(graph);
         if(isConnected){
             System.out.println("The graph is connected");
         }
