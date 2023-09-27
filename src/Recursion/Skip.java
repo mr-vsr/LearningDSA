@@ -3,8 +3,8 @@ package Recursion;
 public class Skip {
     public static void main(String[] args){
         String p = "";
-        String up = "aabacappledaefgah";
-        System.out.println(skipApple(p,up));
+        String up = "appbacappledaefgah";
+        System.out.println(skipAppNotApple(p,up));
     }
 
     public static void skip(String p,String up){
@@ -43,6 +43,18 @@ public class Skip {
         }
         else{
             return up.charAt(0) + skipApple(p,up.substring(1));
+        }
+    }
+
+    public static String skipAppNotApple(String p,String up){
+        if(up.isEmpty()){
+            return "";
+        }
+        if(up.startsWith("app") && !up.startsWith("apple")){
+            return skipAppNotApple(p,up.substring(3));
+        }
+        else{
+            return up.charAt(0) + skipAppNotApple(p,up.substring(1));
         }
     }
 }
