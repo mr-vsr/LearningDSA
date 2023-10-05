@@ -1,6 +1,6 @@
 package LeetCodeDailyProblems;
 
-public class Pattern132 {
+public class Day02 {
         public static boolean find132pattern(int[] nums) {
             if (nums.length < 3) {
                 return false;

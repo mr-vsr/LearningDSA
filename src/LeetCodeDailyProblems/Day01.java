@@ -2,7 +2,7 @@ package LeetCodeDailyProblems;
 
 import java.util.Arrays;
 
-public class ReversingEachWordOfString {
+public class Day01 {
 
     //Using Brute force approach
         public static String reverseWords(String s) {
