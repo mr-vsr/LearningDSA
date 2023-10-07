@@ -24,6 +24,9 @@ public class SL {
         newList.display();
 
         System.out.println(newList.delete(2));
+        System.out.println(newList.deleteFirst());
+        System.out.println(newList.deleteFirst());
+        System.out.println(newList.deleteFirst());
 
         newList.display();
     }
