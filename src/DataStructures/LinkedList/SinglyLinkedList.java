@@ -59,23 +59,36 @@ public class SinglyLinkedList {
         size++;
     }
     public int deleteFirst(){
+
+        if(head == null){
+            return -1;
+        }
+
         int value = head.value;
+
         head = head.next;
+
         if(head==null){
             tail  = null;
         }
+
         size--;
         return value;
     }
     public int deleteLast(){
+
         if(size<=1){
             return deleteFirst();
         }
+
         Node prevNode = get(size-2);
+
+
         int val = tail.value;
+
         tail = prevNode;
         tail.next = null;
-
+        size--;
         return val;
     }
     public int delete(int index){
@@ -100,9 +113,15 @@ public class SinglyLinkedList {
         return node;
     }
     public void display(){
+
+        if(head == null){
+            System.out.println("END");
+            return;
+        }
+
         Node temp = head;
         while(temp != null){
-            System.out.print(temp.value+" -> ");
+            System.out.print(temp.value + " -> ");
             temp = temp.next;
         }
         System.out.println("END");
