@@ -1,15 +1,15 @@
 package DataStructures.LinkedList;
 
 public class SinglyLinkedList {
-    private Node head ;
+    public Node head ;
     private Node tail;
     private int size;
     public SinglyLinkedList(){
         this.size = 0;
     }
-    private class Node{
-        private int value;
-        private Node next;
+     public class Node{
+        public int value;
+        public Node next;
 
         public Node(int value){
             this.value = value;
@@ -19,7 +19,18 @@ public class SinglyLinkedList {
             this.next = next;
         }
     }
-
+    public void insertRec(int index,int value){
+        head = insertRec(index,value,head);
+    }
+    private Node insertRec(int index,int value,Node node){
+        if(index==0){
+            Node temp = new Node(value,node);
+            size++;
+            return temp;
+        }
+            node.next = insertRec(index-1, value, node.next);
+        return node;
+    }
     public void insertFirst(int data){
         Node newNode = new Node(data);
         newNode.next = head;
@@ -33,13 +44,13 @@ public class SinglyLinkedList {
     public void insertLast(int data){
         if(tail==null){
             insertFirst(data);
+            return;
         }
-
         Node newNode = new Node(data);
         tail.next = newNode;
         tail = newNode;
+        tail.next = null;
         size++;
-
     }
     public void insert(int data,int index){
         if(index==0){
@@ -125,6 +136,19 @@ public class SinglyLinkedList {
             temp = temp.next;
         }
         System.out.println("END");
+    }
+    public void deleteDuplicate(){
+        Node currentNode = head;
+        while(currentNode.next != null){
+            if(currentNode.value == currentNode.next.value){
+                currentNode.next = currentNode.next.next;
+                size--;
+            }else{
+                currentNode = currentNode.next;
+            }
+        }
+        tail = currentNode;
+        tail.next = null;
     }
 
 }
