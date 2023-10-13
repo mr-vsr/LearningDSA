@@ -1,7 +1,9 @@
 package DataStructures.LinkedList;
 
 import DataStructures.LinkedList.ProblemsOnLinkedList.CycleInList;
+import DataStructures.LinkedList.ProblemsOnLinkedList.MergeSort;
 import DataStructures.LinkedList.ProblemsOnLinkedList.MergingLists;
+import DataStructures.LinkedList.ProblemsOnLinkedList.ReversingLinkedList;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,28 +19,54 @@ public class Main {
 //        newList.display();
 
 
+//
+//        SinglyLinkedList list1 = new SinglyLinkedList();
+//        list1.insertLast(1);
+//        list1.insertLast(1);
+//        list1.insertLast(2);
+//        list1.insertLast(3);
+//
+//        list1.display();
+//
+//        SinglyLinkedList list2 = new SinglyLinkedList();
+//        list2.insertLast(4);
+//        list2.insertLast(5);
+//        list2.insertLast(6);
+//
+//        list2.display();
+//
+//        SinglyLinkedList ans = MergingLists.merge(list1,list2);
+//        ans.display();
+//
+//        System.out.println(CycleInList.isCyclePresent(list1.head));
+//
+//        System.out.println(CycleInList.detectCycle(list2.head));
 
-        SinglyLinkedList list1 = new SinglyLinkedList();
-        list1.insertLast(1);
-        list1.insertLast(1);
-        list1.insertLast(2);
-        list1.insertLast(3);
+        SinglyLinkedList list = new SinglyLinkedList();
+        list.insertLast(1);
+        list.insertLast(2);
+        list.insertLast(2);
+        list.insertLast(1);
+//        list.insertLast(5);
+//        list.insertLast(6);
+//        list.insertLast(7);
+//        list.insertLast(8);
 
-        list1.display();
+//        list.getMid(list.head);
 
-        SinglyLinkedList list2 = new SinglyLinkedList();
-        list2.insertLast(4);
-        list2.insertLast(5);
-        list2.insertLast(6);
+//        SinglyLinkedList.Node head = ReversingLinkedList.reverseList(list.head);
+//        list.display(head);
 
-        list2.display();
+//        SinglyLinkedList.display(MergeSort.mergeSort(list.head));
+//        SinglyLinkedList.Node ansHead = MergeSort.merge(list.head,list2.head);
 
-        SinglyLinkedList ans = MergingLists.merge(list1,list2);
-        ans.display();
+//        SinglyLinkedList.display(ansHead);
+//        SinglyLinkedList.display(MergeSort.getMid(ansHead));
 
-        System.out.println(CycleInList.isCyclePresent(list1.head));
+//        list.reverseList(list.head);
 
-        System.out.println(CycleInList.detectCycle(list2.head));
+        System.out.println(ReversingLinkedList.isPalindrome(list.head));
+//        list.display();
 
 //-----------Doubly Linked List---------------------------------------------------------------------------------------------------
 

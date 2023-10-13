@@ -2,7 +2,7 @@ package DataStructures.LinkedList;
 
 public class SinglyLinkedList {
     public Node head ;
-    private Node tail;
+    public Node tail;
     private int size;
     public SinglyLinkedList(){
         this.size = 0;
@@ -151,4 +151,35 @@ public class SinglyLinkedList {
         tail.next = null;
     }
 
+    public static void display(Node head){
+        Node temp = head;
+        while(temp != null){
+            System.out.print(temp.value + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("END");
+    }
+
+    public void reverseList(Node node){
+        if(node == tail){
+            head = tail;
+            return;
+        }
+        reverseList(node.next);
+
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
+
+    public void getMid(Node node){
+        Node slow = node;
+        Node fast = node;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        System.out.println(slow.value);
+    }
 }
