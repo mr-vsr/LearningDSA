@@ -40,6 +40,8 @@ public class CreatingTree {
     // method to insert the elements to the root node
 
     private void populate(Scanner sc, Node node) {
+
+        //Code for entering the data to the left of the current node.
         System.out.println("Do you want to enter the data to the left of " + node.value);
         boolean left = sc.nextBoolean();
         if (left) {
@@ -48,6 +50,7 @@ public class CreatingTree {
             node.left = new Node(value);
             populate(sc, node.left);
         }
+        //Code for entering the data to the right of the current node.
         System.out.println("Do you want to enter the data to the right of " + node.value);
         boolean right = sc.nextBoolean();
         if (right) {
@@ -57,39 +60,59 @@ public class CreatingTree {
             populate(sc, node.right);
         }
     }
+//
+//    public void display() {
+//        display(root, "");
+//    }
+//
+//    public void display(Node node, String indent) {
+//        if (node == null) {
+//            return;
+//        }
+//        System.out.println(indent + node.value);
+//        display(node.left, indent + "\t");
+//        display(node.right, indent + "\t");
+//    }
+//
+//    void prettyDisplay(){
+//        prettyDisplay(root,0);
+//    }
+//    public void prettyDisplay(Node node , int level){
+//        if(node == null){
+//            return;
+//        }
+//        prettyDisplay(node.right,level+1);
+//
+//        if(level!=0){
+//            for(int i=0;i<level-1;i++){
+//                System.out.print("|\t\t");
+//            }
+//            System.out.println("|------------>" + node.value);
+//        }
+//        else{
+//            System.out.println(node.value);
+//        }
+//        prettyDisplay(node.left,level+1 );
+//    }
+//
 
-    public void display() {
-        display(root, "");
+    public void display(){
+            display(root,"");
     }
-
-    public void display(Node node, String indent) {
-        if (node == null) {
-            return;
-        }
-        System.out.println(indent + node.value);
-        display(node.left, indent + "\t");
-        display(node.right, indent + "\t");
-    }
-
-    void prettyDisplay(){
-        prettyDisplay(root,0);
-    }
-    public void prettyDisplay(Node node , int level){
-        if(node == null){
-            return;
-        }
-        prettyDisplay(node.right,level+1);
-
-        if(level!=0){
-            for(int i=0;i<level-1;i++){
-                System.out.print("|\t\t");
+    private void display(Node node,String indent){
+            if(node == null){
+                return;
             }
-            System.out.println("|------------>" + node.value);
-        }
-        else{
-            System.out.println(node.value);
-        }
-        prettyDisplay(node.left,level+1 );
+        System.out.println(indent + node.value);
+            display(node.left , indent + "\t");
+            display(node.right , indent + "\t");
+
     }
 
+    public static void main(String[] args){
+            Scanner scanner = new Scanner(System.in);
+            CreatingTree tree = new CreatingTree();
+            tree.populate(scanner);
+            tree.display();
+    }
 }
