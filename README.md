@@ -50,9 +50,5 @@ Solving a problem by breaking it down into smaller instances of the same problem
 ### Backtracking: 
 Systematically searching through all possible solutions to find the correct one.
 
-
-
-All the .java files are available in src folder.
-out/production contains all the .class files.
 Feel free to explore all the programs and any suggestions and feedback are appreciated.
 Enjoy your learning experience!
