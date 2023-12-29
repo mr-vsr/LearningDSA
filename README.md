@@ -2,19 +2,19 @@
 
 This repository contains Java implementations of various data structures and algorithms. The codebase is organized as follows:
 
-#Data Structures
+__Data Structures__
 
-Arrays: Implementation of array data structure with basic operations.
+__Arrays__: Implementation of array data structure with basic operations.
 
-Linked Lists: Implementation of singly linked lists, doubly linked lists, and circular linked lists.
+__Linked Lists__: Implementation of singly linked lists, doubly linked lists, and circular linked lists.
 
-Stacks: Implementation of a stack data structure using arrays and linked lists.
+__Stacks__: Implementation of a stack data structure using arrays and linked lists.
 
-Queues: Implementation of queue data structure using arrays and linked lists, including priority queues.
+__Queues__: Implementation of queue data structure using arrays and linked lists, including priority queues.
 
-Trees: Implementation of binary trees, binary search trees, AVL trees, and more.
+__Trees__: Implementation of binary trees, binary search trees, AVL trees, and more.
 
-Graphs: Implementation of graph data structure with graph traversal algorithms.
+__Graphs__: Implementation of graph data structure with graph traversal algorithms.
 
 #Algorithms
 
